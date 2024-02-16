@@ -1,39 +1,51 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
+import Python from "./icons/Python.astro"
+import R from "./icons/R.astro"
+import Tensor from "./icons/Tensor.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
+  AWS: {
+    name: "Amazon Web Services",
+    class: "bg-[#d62828] text-white",
     icon: NextJS,
   },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#fca311] text-white",
+    icon: Python,
+  },
+  R: {
+    name: "R Language",
+    class: "bg-[#fca311] text-white",
+    icon: R,
+  },
+  TENSOR: {
+    name: "TensorFlow",
+    class: "bg-[#d62828] text-white",
+    icon: Tensor,
   },
 }
 const PROJECTS = [
   {
-    title: "Proyecto 1",
+    title: "Detección De Rostros utilizando OpenCV y una Red Neuronal",
     description:
-      "Biblioteca de logos.",
-    link: "#",
-    github: "#",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Detección De Rostros utilizando OpenCV y una red neuronal entrenada con imágenes.",
+    link: "https://github.com/carlos-ruiz10/DeteccionDeRostros/tree/main",
+    github: "https://github.com/carlos-ruiz10/DeteccionDeRostros/tree/main",
+    image: "/projects/img.jpeg",
+    tags: [TAGS.AWS, TAGS.PYTHON, TAGS.TENSOR],
   },
   {
-    title: "Proyecto 2",
+    title: "Análisis Fraude con tarjetas de crédito",
     description:
-      "Plataforma.",
-    link: "#",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Los pagos digitales están evolucionando, pero también lo hacen los ciberdelincuentes. En el mundo digital actual, donde se realizan billones de transacciones con tarjeta por día, la detección del fraude es un desafío.",
+    link: "https://www.kaggle.com/code/carlosruizcc/analysis-of-the-dataset-knn-dt-msv-rf",
+    image: "https://psn.si/wp-content/uploads/2023/12/fraude.jpeg",
+    tags: [TAGS.R, TAGS.PYTHON],
   },
 ]
 ---
@@ -44,7 +56,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="description" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
